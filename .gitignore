@@ -7,11 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
+
+# Build output
 dist
 dist-ssr
 dist-electron
 release
+
+# Lock files
+package-lock.json
+
+# Local environment files
 *.local
 
 # Editor directories and files

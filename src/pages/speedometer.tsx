@@ -2,7 +2,15 @@
 import { useEffect, useState } from "react";
 import ReactSpeedometer from "react-d3-speedometer";
 
-const Speedometer = ({ canDataManager }: any) => {
+interface CanDataManager {
+  RegisterDataReceivedCallback: (callback: (data: number) => void) => void;
+}
+
+interface SpeedometerProps {
+  canDataManager: CanDataManager;
+}
+
+const Speedometer = ({ canDataManager }: SpeedometerProps) => {
   const [speedData, setSpeedData] = useState(50); // default value
 
   useEffect(() => {
